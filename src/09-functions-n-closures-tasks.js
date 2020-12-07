@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+
 /* *********************************************************************************************
  *                                                                                             *
  * Plese read the following tutorial before implementing tasks:                                *
@@ -24,8 +24,11 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.asin(x))
  *
  */
-function getComposition(/* f, g */) {
-  throw new Error('Not implemented');
+function getComposition(f, g) {
+  return function s(value) {
+    return f(g(value));
+  };
+  // throw new Error('Not implemented');
 }
 
 
@@ -45,8 +48,11 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  return function p(num) {
+    return num ** exponent;
+  };
+  // throw new Error('Not implemented');
 }
 
 
@@ -63,7 +69,11 @@ function getPowerFunction(/* exponent */) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom() {
+function getPolynom(/* a = 0, b = 0, c = 0 */) {
+  // return function name(x) {
+  //   if (a === 0) return null;
+  //   return a * x ** 2 + b * x + c;
+  // };
   throw new Error('Not implemented');
 }
 

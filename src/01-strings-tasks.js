@@ -1,5 +1,4 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable linebreak-style */
+
 /* *******************************************************************************************
  *                                                                                           *
  * Plese read the following tutorial before implementing tasks:                              *
@@ -216,10 +215,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(/* width, height */) {
-  // const firstStr = `┌${'─'.repeat(width - 2)}┐` + '\n';
-  // const middleStr = `│${' '.repeat(width - 2)}│` + '\n';
+  // const firstStr = `┌${'─'.repeat(width - 2)}┐\n`;
+  // const middleStr = `│${' '.repeat(width - 2)}│\n`;
   // middleStr.repeat(height - 2);
-  // const lastStr = `└${'─'.repeat(width - 2)}┘` + '\n';
+  // const lastStr = `└${'─'.repeat(width - 2)}┘\n`;
   // return firstStr + middleStr + lastStr;
 
   // for (let y = 0; y < height; y += 1) {

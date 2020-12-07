@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-return-assign */
-/* eslint-disable linebreak-style */
+
 /* ********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
@@ -216,9 +214,13 @@ function getTail(arr, n) {
  */
 function toCsvText(/* arr */) {
   // let result = '';
-  // for (let i = 0; i <= arr.length; i += 1) {
-  //   result += `${arr[i].join(',')}\n`;
+  // let tmp = [];
+  // for (let i = 0; i < arr.length - 1; i += 1) {
+  //   tmp = Array.of(arr[i]);
+  //   result += `${tmp.join(',')}\n`;
   // }
+  // tmp = Array.of(arr[arr.length - 1]);
+  // result += `${tmp.join(',')}`;
   // return result;
   throw new Error('Not implemented');
 }
@@ -328,9 +330,9 @@ function get3TopItems(arr) {
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
  */
-function getPositivesCount(arr) {
-  return arr.reduce((p, c) => (((c > 0) && (typeof c !== 'string')) ? p += 1 : p), 0);
-  // throw new Error('Not implemented');
+function getPositivesCount(/* arr */) {
+  // return arr.reduce((p, c) => (((c > 0) && (typeof c !== 'string')) ? p += 1 : p), 0);
+  throw new Error('Not implemented');
 }
 
 /**
@@ -363,9 +365,9 @@ function sortDigitNamesByNumericOrder(/* arr */) {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-function getItemsSum(arr) {
-  return arr.reduce((a, v) => a += v, 0);
-  // throw new Error('Not implemented');
+function getItemsSum(/* arr */) {
+  // return arr.reduce((a, v) =>  a += v, 0);
+  throw new Error('Not implemented');
 }
 
 /**
@@ -506,10 +508,12 @@ function getIdentityMatrix(/* n */) {
  */
 function getIntervalArray(start, end) {
   const arr = Array.from({ length: Math.abs(end - start + 1) }, (v, k) => k);
+  let s = start;
   return arr.map((x) => {
-    x = start;
-    start += 1;
-    return x;
+    let x1 = x;
+    x1 = s;
+    s += 1;
+    return x1;
   });
   // throw new Error('Not implemented');
 }
